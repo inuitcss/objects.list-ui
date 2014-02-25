@@ -1,0 +1,85 @@
+/*------------------------------------*\
+    #UI-LIST
+\*------------------------------------*/
+
+/**
+ * The UI list object creates blocky list items with a keyline separator out of
+ * a `ul` or `ol`.
+ */
+
+// Predefine the variables below in order to alter and enable specific features.
+$inuit-ui-list-padding:         $inuit-base-spacing-unit !default;
+$inuit-ui-list-padding--small:  halve($inuit-ui-list-padding) !default;
+$inuit-ui-list-padding--large:  double($inuit-ui-list-padding) !default;
+
+$inuit-ui-list-border-width:    1px !default;
+$inuit-ui-list-border-style:    solid !default;
+$inuit-ui-list-border-color:    #ccc !default;
+
+$inuit-enable-ui-list--small:   false !default;
+$inuit-enable-ui-list--large:   false !default;
+
+.#{$inuit-namespace}ui-list,
+%#{$inuit-namespace}ui-list,
+    .#{$inuit-namespace}ui-list__item,
+    %#{$inuit-namespace}ui-list__item {
+        border: 0 $inuit-ui-list-border-style $inuit-ui-list-border-color;
+    }
+
+.#{$inuit-namespace}ui-list,
+%#{$inuit-namespace}ui-list {
+    margin:  0;
+    padding: 0;
+    list-style: none;
+    border-top-width: $inuit-ui-list-border-width;
+}
+
+    .#{$inuit-namespace}ui-list__item,
+    %#{$inuit-namespace}ui-list__item {
+        padding: $inuit-ui-list-padding;
+        border-bottom-width: $inuit-ui-list-border-width;
+    }
+
+
+
+
+
+@if ($inuit-enable-ui-list--small == true) {
+
+    /**
+     * Small ui-lists.
+     */
+
+    .#{$inuit-namespace}ui-list--small,
+    %#{$inuit-namespace}ui-list--small {
+
+        > .#{$inuit-namespace}ui-list__item,
+        > %#{$inuit-namespace}ui-list__item {
+            padding: $inuit-ui-list-padding--small;
+        }
+
+    }
+
+}
+
+
+
+
+
+@if ($inuit-enable-ui-list--large == true) {
+
+    /**
+     * Large ui-lists.
+     */
+
+    .#{$inuit-namespace}ui-list--large,
+    %#{$inuit-namespace}ui-list--large {
+
+        > .#{$inuit-namespace}ui-list__item,
+        > %#{$inuit-namespace}ui-list__item {
+            padding: $inuit-ui-list-padding--large;
+        }
+
+    }
+
+}
