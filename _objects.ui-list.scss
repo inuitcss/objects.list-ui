@@ -32,6 +32,11 @@ $inuit-enable-ui-list--large:   false !default;
     padding: 0;
     list-style: none;
     border-top-width: $inuit-ui-list-border-width;
+
+    > li {
+        @extend %#{$inuit-namespace}ui-list__item;
+    }
+
 }
 
     .#{$inuit-namespace}ui-list__item,
