@@ -8,16 +8,19 @@
  */
 
 // Predefine the variables below in order to alter and enable specific features.
-$inuit-ui-list-padding:         $inuit-base-spacing-unit !default;
-$inuit-ui-list-padding--small:  halve($inuit-ui-list-padding) !default;
-$inuit-ui-list-padding--large:  double($inuit-ui-list-padding) !default;
+$inuit-ui-list-padding:             $inuit-base-spacing-unit !default;
+$inuit-ui-list-padding--small:      halve($inuit-ui-list-padding) !default;
+$inuit-ui-list-padding--large:      double($inuit-ui-list-padding) !default;
 
-$inuit-ui-list-border-width:    1px !default;
-$inuit-ui-list-border-style:    solid !default;
-$inuit-ui-list-border-color:    #ccc !default;
+$inuit-ui-list-border-width:        1px !default;
+$inuit-ui-list-border-style:        solid !default;
+$inuit-ui-list-border-color:        #ccc !default;
 
-$inuit-enable-ui-list--small:   false !default;
-$inuit-enable-ui-list--large:   false !default;
+$inuit-enable-ui-list--small:       false !default;
+$inuit-enable-ui-list--large:       false !default;
+$inuit-enable-ui-list--responsive:  false !default;
+$inuit-ui-list-collapse-at:         720px !default;
+
 
 .#{$inuit-namespace}ui-list,
 %#{$inuit-namespace}ui-list,
@@ -87,4 +90,57 @@ $inuit-enable-ui-list--large:   false !default;
 
     }
 
+}
+
+
+
+@if ($inuit-enable-ui-list--responsive == true){
+
+    /**
+     * Responsive ui-list, decreasing its padding at the breakpoint
+     */
+    @media screen and (max-width: $inuit-ui-list-collapse-at){
+
+        .#{$inuit-namespace}ui-list--responsive,
+        %#{$inuit-namespace}ui-list--responsive{
+
+            .#{$inuit-namespace}ui-list__item,
+            %#{$inuit-namespace}ui-list__item,
+            > li{
+                padding: halve($inuit-ui-list-padding);
+            }
+
+            @if ($inuit-enable-ui-list--small == true){
+
+                /**
+                 * Small ui-list at the breakpoint
+                 */
+                &.#{$inuit-namespace}ui-list--small,
+                &%#{$inuit-namespace}ui-list--small{
+
+                    .#{$inuit-namespace}ui-list__item,
+                    %#{$inuit-namespace}ui-list__item,
+                    > li{
+                        padding: halve($inuit-ui-list-padding--small);
+                    }
+                }
+            }
+
+            @if ($inuit-enable-ui-list--large == true){
+
+                /**
+                 * Large ui-list at the breakpoint
+                 */
+                &.#{$inuit-namespace}ui-list--large,
+                &%#{$inuit-namespace}ui-list--large{
+
+                    .#{$inuit-namespace}ui-list__item,
+                    %#{$inuit-namespace}ui-list__item,
+                    > li{
+                        padding: halve($inuit-ui-list-padding--large);
+                    }
+                }
+            }
+        }
+    }
 }
