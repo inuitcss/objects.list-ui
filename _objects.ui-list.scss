@@ -58,8 +58,7 @@ $inuit-enable-ui-list--large:   false !default;
     .#{$inuit-namespace}ui-list--small,
     %#{$inuit-namespace}ui-list--small {
 
-        > .#{$inuit-namespace}ui-list__item,
-        > %#{$inuit-namespace}ui-list__item {
+        > li {
             padding: $inuit-ui-list-padding--small;
         }
 
@@ -80,8 +79,7 @@ $inuit-enable-ui-list--large:   false !default;
     .#{$inuit-namespace}ui-list--large,
     %#{$inuit-namespace}ui-list--large {
 
-        > .#{$inuit-namespace}ui-list__item,
-        > %#{$inuit-namespace}ui-list__item {
+        > li {
             padding: $inuit-ui-list-padding--large;
         }
 
