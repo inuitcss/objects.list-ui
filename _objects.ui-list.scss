@@ -8,6 +8,8 @@
  */
 
 // Predefine the variables below in order to alter and enable specific features.
+$inuit-ui-list-namespace:       $inuit-namespace !default;
+
 $inuit-ui-list-padding:         $inuit-base-spacing-unit !default;
 $inuit-ui-list-padding--small:  halve($inuit-ui-list-padding) !default;
 $inuit-ui-list-padding--large:  double($inuit-ui-list-padding) !default;
@@ -19,28 +21,28 @@ $inuit-ui-list-border-color:    #ccc !default;
 $inuit-enable-ui-list--small:   false !default;
 $inuit-enable-ui-list--large:   false !default;
 
-.#{$inuit-namespace}ui-list,
-%#{$inuit-namespace}ui-list,
-    .#{$inuit-namespace}ui-list__item,
-    %#{$inuit-namespace}ui-list__item {
+.#{$inuit-ui-list-namespace}ui-list,
+%#{$inuit-ui-list-namespace}ui-list,
+    .#{$inuit-ui-list-namespace}ui-list__item,
+    %#{$inuit-ui-list-namespace}ui-list__item {
         border: 0 $inuit-ui-list-border-style $inuit-ui-list-border-color;
     }
 
-.#{$inuit-namespace}ui-list,
-%#{$inuit-namespace}ui-list {
+.#{$inuit-ui-list-namespace}ui-list,
+%#{$inuit-ui-list-namespace}ui-list {
     margin:  0;
     padding: 0;
     list-style: none;
     border-top-width: $inuit-ui-list-border-width;
 
     > li {
-        @extend %#{$inuit-namespace}ui-list__item;
+        @extend %#{$inuit-ui-list-namespace}ui-list__item;
     }
 
 }
 
-    .#{$inuit-namespace}ui-list__item,
-    %#{$inuit-namespace}ui-list__item {
+    .#{$inuit-ui-list-namespace}ui-list__item,
+    %#{$inuit-ui-list-namespace}ui-list__item {
         padding: $inuit-ui-list-padding;
         border-bottom-width: $inuit-ui-list-border-width;
     }
@@ -55,11 +57,11 @@ $inuit-enable-ui-list--large:   false !default;
      * Small ui-lists.
      */
 
-    .#{$inuit-namespace}ui-list--small,
-    %#{$inuit-namespace}ui-list--small {
+    .#{$inuit-ui-list-namespace}ui-list--small,
+    %#{$inuit-ui-list-namespace}ui-list--small {
 
-        > .#{$inuit-namespace}ui-list__item,
-        > %#{$inuit-namespace}ui-list__item {
+        > .#{$inuit-ui-list-namespace}ui-list__item,
+        > %#{$inuit-ui-list-namespace}ui-list__item {
             padding: $inuit-ui-list-padding--small;
         }
 
@@ -77,11 +79,11 @@ $inuit-enable-ui-list--large:   false !default;
      * Large ui-lists.
      */
 
-    .#{$inuit-namespace}ui-list--large,
-    %#{$inuit-namespace}ui-list--large {
+    .#{$inuit-ui-list-namespace}ui-list--large,
+    %#{$inuit-ui-list-namespace}ui-list--large {
 
-        > .#{$inuit-namespace}ui-list__item,
-        > %#{$inuit-namespace}ui-list__item {
+        > .#{$inuit-ui-list-namespace}ui-list__item,
+        > %#{$inuit-ui-list-namespace}ui-list__item {
             padding: $inuit-ui-list-padding--large;
         }
 
