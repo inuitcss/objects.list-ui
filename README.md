@@ -1,7 +1,7 @@
-# The ui-list object
+# The list-ui object
 
-The `ui-list` object creates blocky, keyline-delimited list items.
+The `list-ui` object creates blocky, keyline-delimited list items.
 
 Install using Bower:
 
-    $ bower install --save inuit-ui-list
+    $ bower install --save inuit-list-ui
