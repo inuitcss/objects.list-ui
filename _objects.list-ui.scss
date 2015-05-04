@@ -25,28 +25,28 @@ $inuit-enable-list-ui--small:   false !default;
 $inuit-enable-list-ui--large:   false !default;
 $inuit-enable-list-ui--huge:    false !default;
 
-.#{$inuit-list-ui-namespace}list-ui,
-%#{$inuit-list-ui-namespace}list-ui,
-    .#{$inuit-list-ui-namespace}list-ui__item,
-    %#{$inuit-list-ui-namespace}list-ui__item {
+.#{$inuit-list-ui-namespace}o-list-ui,
+%#{$inuit-list-ui-namespace}o-list-ui,
+    .#{$inuit-list-ui-namespace}o-list-ui__item,
+    %#{$inuit-list-ui-namespace}o-list-ui__item {
         border: 0 $inuit-list-ui-border-style $inuit-list-ui-border-color;
     }
 
-.#{$inuit-list-ui-namespace}list-ui,
-%#{$inuit-list-ui-namespace}list-ui {
+.#{$inuit-list-ui-namespace}o-list-ui,
+%#{$inuit-list-ui-namespace}o-list-ui {
     margin:  0;
     padding: 0;
     list-style: none;
     border-top-width: $inuit-list-ui-border-width;
 
     > li {
-        @extend %#{$inuit-list-ui-namespace}list-ui__item;
+        @extend %#{$inuit-list-ui-namespace}o-list-ui__item;
     }
 
 }
 
-    .#{$inuit-list-ui-namespace}list-ui__item,
-    %#{$inuit-list-ui-namespace}list-ui__item {
+    .#{$inuit-list-ui-namespace}o-list-ui__item,
+    %#{$inuit-list-ui-namespace}o-list-ui__item {
         padding: $inuit-list-ui-padding;
         border-bottom-width: $inuit-list-ui-border-width;
     }
@@ -61,11 +61,11 @@ $inuit-enable-list-ui--huge:    false !default;
      * Tiny list-uis.
      */
 
-    .#{$inuit-list-ui-namespace}list-ui--tiny,
-    %#{$inuit-list-ui-namespace}list-ui--tiny {
+    .#{$inuit-list-ui-namespace}o-list-ui--tiny,
+    %#{$inuit-list-ui-namespace}o-list-ui--tiny {
 
-        > .#{$inuit-list-ui-namespace}list-ui__item,
-        > %#{$inuit-list-ui-namespace}list-ui__item {
+        > .#{$inuit-list-ui-namespace}o-list-ui__item,
+        > %#{$inuit-list-ui-namespace}o-list-ui__item {
             padding: $inuit-list-ui-padding--tiny;
         }
 
@@ -79,11 +79,11 @@ $inuit-enable-list-ui--huge:    false !default;
      * Small list-uis.
      */
 
-    .#{$inuit-list-ui-namespace}list-ui--small,
-    %#{$inuit-list-ui-namespace}list-ui--small {
+    .#{$inuit-list-ui-namespace}o-list-ui--small,
+    %#{$inuit-list-ui-namespace}o-list-ui--small {
 
-        > .#{$inuit-list-ui-namespace}list-ui__item,
-        > %#{$inuit-list-ui-namespace}list-ui__item {
+        > .#{$inuit-list-ui-namespace}o-list-ui__item,
+        > %#{$inuit-list-ui-namespace}o-list-ui__item {
             padding: $inuit-list-ui-padding--small;
         }
 
@@ -97,11 +97,11 @@ $inuit-enable-list-ui--huge:    false !default;
      * Large list-uis.
      */
 
-    .#{$inuit-list-ui-namespace}list-ui--large,
-    %#{$inuit-list-ui-namespace}list-ui--large {
+    .#{$inuit-list-ui-namespace}o-list-ui--large,
+    %#{$inuit-list-ui-namespace}o-list-ui--large {
 
-        > .#{$inuit-list-ui-namespace}list-ui__item,
-        > %#{$inuit-list-ui-namespace}list-ui__item {
+        > .#{$inuit-list-ui-namespace}o-list-ui__item,
+        > %#{$inuit-list-ui-namespace}o-list-ui__item {
             padding: $inuit-list-ui-padding--large;
         }
 
@@ -115,11 +115,11 @@ $inuit-enable-list-ui--huge:    false !default;
      * Huge list-uis.
      */
 
-    .#{$inuit-list-ui-namespace}list-ui--huge,
-    %#{$inuit-list-ui-namespace}list-ui--huge {
+    .#{$inuit-list-ui-namespace}o-list-ui--huge,
+    %#{$inuit-list-ui-namespace}o-list-ui--huge {
 
-        > .#{$inuit-list-ui-namespace}list-ui__item,
-        > %#{$inuit-list-ui-namespace}list-ui__item {
+        > .#{$inuit-list-ui-namespace}o-list-ui__item,
+        > %#{$inuit-list-ui-namespace}o-list-ui__item {
             padding: $inuit-list-ui-padding--huge;
         }
 
