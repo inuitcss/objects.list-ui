@@ -20,10 +20,14 @@ $inuit-list-ui-border-width:    1px !default;
 $inuit-list-ui-border-style:    solid !default;
 $inuit-list-ui-border-color:    #ccc !default;
 
+$inuit-list-ui-striped-color:     #f6f6f6 !default;
+$inuit-list-ui-striped-type:      even !default;
+
 $inuit-enable-list-ui--tiny:    false !default;
 $inuit-enable-list-ui--small:   false !default;
 $inuit-enable-list-ui--large:   false !default;
 $inuit-enable-list-ui--huge:    false !default;
+$inuit-enable-list-ui--striped:   false !default;
 
 .#{$inuit-list-ui-namespace}list-ui,
 %#{$inuit-list-ui-namespace}list-ui,
@@ -121,6 +125,26 @@ $inuit-enable-list-ui--huge:    false !default;
         > .#{$inuit-list-ui-namespace}list-ui__item,
         > %#{$inuit-list-ui-namespace}list-ui__item {
             padding: $inuit-list-ui-padding--huge;
+        }
+
+    }
+
+}
+
+@if ($inuit-enable-list-ui--striped == true) {
+
+    /**
+     * Zebra-striped list-uis.
+     */
+
+    .#{$inuit-list-ui-namespace}list-ui--striped,
+    %#{$inuit-list-ui-namespace}list-ui--striped {
+
+        > .#{$inuit-list-ui-namespace}list-ui__item,
+        > %#{$inuit-list-ui-namespace}list-ui__item {
+            &:nth-child(#{$inuit-list-ui-striped-type}) {
+                background-color: $inuit-list-ui-striped-color;
+            }
         }
 
     }
